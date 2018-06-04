@@ -1,0 +1,351 @@
+<template name="register">
+	<div class="modal fade">
+		<div class="modal-dialog modal-sm">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" name="button"><span arial-hedden=true >x</span><span class="sr-only">Close</span></button>
+				</div>
+				 <div class="modal-body text-center">
+				 	<div class="panel panel-default">
+				 		<div class="panel-heading">
+				 		   <h3 class="panel-title">
+				 		   	 Registro de usuario
+				 		   </h3>
+				 		</div>
+				 		<div>
+				 			<form role="form" id="register-form" method="post">
+				 			<div class="form-group">
+				 				<label>Nombre de usuario</label>
+				 				<input type="text" class="form-control" name="regnombre" placeholder="usuario" id="regnombre" requierd>	
+				 			</div>	
+				 			<div class="form-group">
+				 				<label>Email</label>
+				 				<input type="email" class="form-control" name="regmail" placeholder="email" id="regmail" requierd>	
+				 			</div>
+				 			<div class="form-group">
+				 				<label>Contraseña</label>
+				 				<input type="password" class="form-control" name="regclave1" placeholder="contraseña" id="regpass1" requierd>	
+				 			</div>
+				 			<div class="form-group">
+				 				<label>Repite la Contraseña</label>
+				 				<input type="password" class="form-control" name="regclave2" placeholder="contraseña" id="regpass2" requierd>	
+				 			</div>
+				 			<br>
+				 			 <input type="submit" id="create-account" class="btn btn-default btn-primary" value="Crear cuenta">
+				 			 <br>
+				 			 <br>
+				 			 <button type="reset" class="btn btn-default btn-primary" name= "button">Limpiar formulario</button>
+				 			</form>
+				 			<br>
+				 			<a href="#" data="modal" id="reglogin">¿Ya tienes cuenta?</a>
+				 			<br>
+				 			<br>
+				 		</div>
+				 	</div>
+				 </div>	
+			</div>
+		</div>
+	</div>
+</template>
+
+<template name="login">
+<div class="modal fade">
+		<div class="modal-dialog modal-sm">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" name="button"><span arial-hedden=true >x</span><span class="sr-only">Close</span></button>
+				</div>
+				 <div class="modal-body text-center">
+				 	<div class="panel panel-default">
+				 		<div class="panel-heading">
+				 		   <h3 class="panel-title">
+				 		   	 Login de usuario
+				 		   </h3>
+				 		</div>
+				 		<div>
+				 			<form role="form" id="login-form" method="post">
+				 			<div class="form-group">
+				 				<label>Nombre de usuario</label>
+				 				<input type="text" class="form-control" name="logname" placeholder="usuario" id="lognombre" requierd>	
+				 			</div>	
+				 			<div class="form-group">
+				 				<label>Contraseña</label>
+				 				<input type="password" class="form-control" name="logclave1" placeholder="contraseña" id="logpass1" requierd>	
+				 			</div>
+				 			<br>
+				 			 <input type="submit" id="login-account" class="btn btn-default btn-primary" value="Login cuenta">
+				 			 <br>
+				 			 <br>
+				 			 <button type="reset" class="btn btn-default btn-primary" name= "button">Limpiar formulario</button>
+				 			</form>
+				 			<br>
+				 			<a href="#" data="modal" id="logreg">¿Aun no tienes cuenta ?</a>
+				 			<br>
+				 			<br>
+				 			<a href="#" data="modal" id="logolvid">¿Olvidaste la contraseña?</a>
+				 		</div>
+				 	</div>
+				 </div>	
+			</div>
+		</div>
+	</div>
+</template>
+<template name="logout">
+	<div class="modal fade">
+		<div class="modal-dialog modal-sm">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" name="button"><span arial-hedden=true >x</span><span class="sr-only">Close</span></button>
+				</div>
+				 <div class="modal-body text-center">
+				 	<div class="panel panel-default">
+				 		<div class="panel-heading">
+				 		   <h3 class="panel-title">
+				 		   	 Cerrar sesion :{{currentUser.username}}
+				 		   </h3>
+				 		</div>
+				 		<div class="panel-body">
+				 			<form role="form" id="logout-form" method="post">
+				 			<div class="form-group">
+				 				<label>Estas seguro que deseas salir?</label>
+				 				<input type="submit" id="Logout-account" class="btn btn-default btn-primary" value="Cerrar sesion">
+				 			</div>	
+				 			</form>
+				 			<br>
+				 		</div>
+				 	</div>
+				 </div>	
+			</div>
+		</div>
+	</div>
+</template>
+
+<template name = "Registro">
+<div class= "container">	
+   <nav class="navbar navbar-light bg-light">
+  <form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form>
+</nav>
+<form>
+  <div class="form-group row">
+    <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+    <div class="col-sm-10">
+      <input type="email" class="Email" id="inputEmail3" placeholder="Email">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputNombre" class="col-sm-2 col-form-label">Nombre</label>
+    <div class="col-sm-10">
+      <input type="name" class="Nombre" id="nombre" placeholder="Nombre">
+    </div>
+  </div>
+  <fieldset class="form-group">
+    <div class="row">
+      <legend class="col-form-label col-sm-2 pt-0">Radios</legend>
+      <div class="col-sm-10">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+          <label class="form-check-label" for="gridRadios1">
+            First radio
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+          <label class="form-check-label" for="gridRadios2">
+            Second radio
+          </label>
+        </div>
+        <div class="form-check disabled">
+          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" disabled>
+          <label class="form-check-label" for="gridRadios3">
+            Third disabled radio
+          </label>
+        </div>
+      </div>
+    </div>
+  </fieldset>
+  <div class="form-group row">
+    <div class="col-sm-2">Checkbox</div>
+    <div class="col-sm-10">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="gridCheck1">
+        <label class="form-check-label" for="gridCheck1">
+          Example checkbox
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col-sm-10">
+      <button type="submit" class="btn btn-primary">Sign in</button>
+    </div>
+  </div>
+</form>
+<div > 
+<button type="button" class="btnIngreso">Ingreso</button>
+<button type="button" class="btn btn-secondary">Eliminar</button>
+<button type="button" class="btn btn-secondary">Actualizar</button>
+<button type="button" class="btn btn-secondary">Nuevo</button>
+</div>
+</div>
+</template>
+
+<template name="form">
+    <div class="container">  	
+        <form id="insert-form">
+        <h3>Ingreso Mentores</h3>
+        <div class="row">
+            <div class="col-md-4">
+                <input type="text" class="form-control" id="name" placeholder="Nombre" name="name"/>
+            </div>
+            <div class="col-md-4">
+                <input type="text" class="form-control" id="Mentorado" placeholder="Mentorado" name = Mentorado />
+            </div>
+            <div class="col-md-4">
+                <input type="text" class="form-control" id="Direccion" placeholder="Direccion" name = Direccion />
+            </div>
+            <div class="col-md-4">
+                <input type="submit" name="Insert" class="btn btn-primary" />
+            </div>
+        </div>
+        </form>    
+    </div>
+      <div class="container">
+      <h3>Mentores</h3>
+      <div class='row'>
+          <div class="col-md-3">
+              <h3><b>Nombre</b></h3>
+          </div>
+          <div class="col-md-3">
+              <h3><b>Mentorado</b></h3>
+          </div>
+          <div class="col-md-3">
+              <h3><b>Direccion</b></h3>
+          </div>
+      </div>
+      {{#each records}}
+      <div class="row">
+          <div class="col-md-3">
+              {{name}}
+          </div>
+          <div class="col-md-3">
+              {{Mentorado}}
+          </div>
+          <div class="col-md-3">
+              {{Direccion}}
+          </div>
+             <button type="button" class="delete">Eliminar</button>
+             <button type="submit" class="Update">Actualizar</button>
+      </div>
+      {{/each}}
+    </div>
+</template>
+
+<template name="IngresoInvitados">
+    <div class="container">  	
+        <form id ="insert-form">
+        <div class="form-row">
+      	<div class="col-sm-10">
+         <div class="form-check">
+         	<legend class="col-form-label col-sm-4 ">¿Asiste a casa de paz?</legend>
+         	 <input class="form-check-input" type="radio" name="Asiste" id="Si" value="Si">
+          	<label class="form-check-label" for="gridRadios2">
+            	SI
+         	 </label>
+         	 <input class="form-check-input" type="radio" name="NoAsiste" id="No" value="No">
+          	<label class="form-check-label" for="gridRadios3">
+           		 NO
+         	</label>
+     	</div>
+     	</div>
+         	<div class="form-group col-md-4">
+		      <label for="inputState">Nombre de lider</label>
+		      
+		      <select id="Mentores" class="form-control">   
+		      	{{#each Mentores}} 
+		        <option value ="{{_id}}">
+		        	{{name}}
+		        </option>
+         		 {{/each}}      
+		      </select>
+		    </div>
+		    <div class="form-group col-md-4">
+		      <label for="Anfitrion">Anfitrion</label>
+		      <input type="text" class="form-control" id="Anfitrion" placeholder="Anfitrion" name: Anfitrion>
+		    </div>
+		    <div class="form-group col-md-6">
+		      <label for="name">Nombre</label>
+		      <input type="text" class="form-control" id="NombreInv" placeholder="Nombre de Invitado" name: name> 
+		    </div>
+		  <div class="form-group col-md-6">
+		    <label for="lastName">Apellido</label>
+		    <input type="text" class="form-control" id="ApellidoInv" placeholder="Apellido de Invitado">
+		  </div>
+		  <div class="form-group col-md-1">
+		    <label for="Edad">Edad</label>
+		    <input type="text" class="form-control" id="EdadInv" placeholder="Edad">
+		  </div>
+		  <div class="form-group col-md-4">
+		      <label for="IngresoEs">Estado Civil</label>
+		      <select id="EstadoCivil" class="form-control">
+		      	<option selected>Elija una opcion....</option>
+		        <option selected>Soltero</option>
+		        <option selected>Casado</option>
+		        <option selected>Divorciado</option>
+		        <option selected>Union Libre</option>
+		        <option selected>Viuda(o)</option>
+		      </select>
+		    </div>
+		    <div class="form-group col-md-4">
+		      <label for="TelConvencional">Telefono Convencional</label>
+		      <input type="text" class="form-control" id="EsInv" placeholder="Telefono Convensional">
+		    </div>
+		    <div class="form-group col-md-2">
+		      <label for="Celular">Celular</label>
+		      <input type="text" class="form-control" id="inputCell" placeholder="Celular">
+		    </div>
+		      <div class="form-group col-md-5">
+		      <label for="Email">Email</label>
+		      <input type="text" class="form-control" id="Email" placeholder="Email">
+		    </div>
+		    <div class="form-group col-md-5">
+		      <label for="Cumple">Cumpleaños</label>
+		      <input type="text" class="form-control" id="Cumple" placeholder="Cumpleaños">
+		    </div>
+		    <div class="form-group col-md-6">
+		      <label for="Direccion">Direccion</label>
+		      <input type="text" class="form-control" id="Direc" placeholder="Direccion">
+		    </div>
+		    <div class="form-group col-md-5">
+		      <label for="Barrio">Barrio</label>
+		      <input type="text" class="form-control" id="Barrio" placeholder="Barrio">
+		    </div>
+		     <div class="form-group col-md-4">
+		      <label for="Sec">Sector</label>
+		      <select id="Sector" class="form-control">
+		      	<option selected>Elija una opcion....</option>
+		        <option selected>Norte</option>
+		        <option selected>Centro</option>
+		        <option selected>Sur</option>
+		        <option selected>Valle de los Chillos</option>
+		        <option selected>Cumbaya</option>
+		        <option selected>Tumbaco</option>
+		        <option selected>Calderon</option>
+		        <option selected>Carapungo</option>
+		        <option selected>Mitad del Mundo</option>
+		      </select>
+		    </div>
+		    <div>
+			<button type="submit" class="col-md-4">Ingresar</button>
+     	 	 </div>
+
+		    </div>
+		  </form>  
+
+          <div class="col-md-3">
+              
+          </div>
+	</div>
+</template>

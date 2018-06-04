@@ -1,0 +1,25 @@
+.topbar{
+	background: #333;
+	color:#99c00f;
+}
+.navbar{
+	background-color:#333;
+}
+.navbar .nav >li >a{
+	color:white;
+	margin: 10px 30px 2px 2px ;
+}
+.navbar li a:hover{
+	color:#99c00f !important;
+}
+.navbar li a:active{
+	color:#99c00f !important;
+}
+.jumbotron{
+	text-align: center;
+	border-radius: 50px 20px;
+}
+.navbar .nav >ul >li >a{
+	color:white;
+	margin: 10px 30px 2px 2px ;
+}

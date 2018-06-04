@@ -1,0 +1,56 @@
+<head>
+  <tiltle></tiltle>
+</head>
+
+ <body>
+
+ </body>
+ 
+ <template name="topBar">
+  <div class="container-fluid topbar">
+    <div class="logo">
+      <h1>Myapp </h1>
+    </div> 
+    </div>
+    <nav class="navbar navbar-default navbar-static-top">
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="nav navbar-nav navbar-right">
+      {{#if currentUser}}
+       <li><a href="#"><span class="glyphicon glyphicon-user" arial-hidden="true"></span>Usuario: {{currentUser.username}}</a></li>
+       <li><a href="#" data-toggle="modal" id="logout"><span class="fa fa-sign-out" arial-hidden="true"></span>Cerrar sesion</a></li>
+      {{else}}
+      <li>
+      <a href="#" data-toggle="modal" id="login"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>Inicio Sesion </a></li>
+      <li><a href="#" data-toggle="modal" id="register"><span class="glyphicon glyphicon-plus" aria-hidden="true"> </span>Registro </a></li>
+      {{/if}}
+  </ul>
+  <ul class="nav navbar-nav">
+    {{#if currentUser}}
+      <li class="nav-item">
+        <a class="nav-link" href="#">Entradas</a>
+      </li>
+      <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">Ingresos<span class="caret"></span></a>
+      <ul class= "dropdown-menu">
+        <li><a  href= "{{pathFor 'form'}}" id="IngresoMen">Ingreso Mentores</a></li>
+        <li><a  href="#" id="IngresoInv">Ingreso Invitados</a></li>
+        <li><a  href="#" id="Ingreso">Ingresos</a></li>
+      </ul>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Reportes</a>
+      </li>
+      {{/if}}
+    </ul>
+  </div>
+</nav>
+<div class= "container">
+  <div class="jumbotron">
+    <h1>Iglesia palabra y poder</h1>
+    <p>
+      Somos un ministerio apostólico y profético levantado por Dios para impactar esta nación con su Palabra y Poder.
+    </p>
+  </div>
+</div>
+</template>
+
+
